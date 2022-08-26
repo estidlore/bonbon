@@ -1,0 +1,26 @@
+$displays: (
+  b: block,
+  f: flex,
+  i: inline,
+  ib: inline-block,
+  if: inline-flex,
+);
+
+.d {
+  @each $disp-k, $disp in $displays {
+    &#{-$disp-k} {
+      display: $disp;
+    }
+  }
+}
+
+.overflow {
+  &#{-no} {
+    overflow: hidden;
+  }
+  @each $axis, $sides in $axes {
+    &#{$axis} {
+      overflow-#{$axis}: auto;
+    }
+  }
+}

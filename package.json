@@ -1,0 +1,19 @@
+{
+  "name": "bonbon",
+  "version": "1.0.0",
+  "description": "Simple sass utilities to cover most needs, with smooth values changes and little verbose",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "front",
+    "node",
+    "sass",
+    "styles",
+    "utils",
+    "ux"
+  ],
+  "author": "estidlore",
+  "license": "MIT"
+}

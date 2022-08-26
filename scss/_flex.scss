@@ -1,0 +1,45 @@
+$aligns: (
+  center: center,
+  end: flex-end,
+  start: flex-start,
+  stretch: stretch,
+);
+$justifies: (
+  around: space-around,
+  between: space-between,
+  center: center,
+  end: end,
+  start: start,
+);
+
+.fill {
+  flex: 1 1 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.ai {
+  @each $align-k, $align in $aligns {
+    &#{-$align-k} {
+      align-items: $align;
+    }
+  }
+}
+
+.jc {
+  @each $justify-k, $justify in $justifies {
+    &#{-$justify-k} {
+      justify-content: $justify;
+    }
+  }  
+}

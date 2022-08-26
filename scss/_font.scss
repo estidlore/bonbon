@@ -1,0 +1,47 @@
+$font-size: 12px;
+$font-styles: (
+  i: italic,
+  n: normal,
+);
+$text-aligns: (
+  center: center,
+  end: end,
+  justify: justify,
+  start: start,
+);
+$text-decors: (
+  no: none,
+  over: overline,
+  through: line-through,
+  under: underline,
+);
+
+.f {
+  @for $i from 1 through 10 {
+    &#{$i} {
+      font-size: $font-size;
+    }
+    $font-size: $font-size * $k15;
+  }
+}
+.fs {
+  @each $style-k, $style in $font-styles {
+    &#{-$style-k} {
+      font-style: $style;
+    }
+  }
+}
+.ta {
+  @each $align-k, $align in $text-aligns {
+    &#{-$align-k} {
+      text-align: $align;
+    }
+  }
+}
+.td {
+  @each $decor-k, $decor in $text-decors {
+    &#{-$decor-k} {
+      text-decoration: $decor;
+    }
+  }
+}

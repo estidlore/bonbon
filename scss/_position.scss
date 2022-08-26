@@ -1,0 +1,27 @@
+$positions: (
+  abs: absolute,
+  rel: relative,
+);
+$sides-n: 8;
+$sides-k: calc(100% / $sides-n);
+
+.pos {
+  @each $position-k, $position in $positions {
+    &#{-$position-k} {
+      position: $position;
+    }
+  }
+}
+
+
+@each $axis-k, $axis in $axes {
+  @each $side-k, $side in $axis {
+    .#{$side-k} {
+      @for $i from 0 through $sides-n {
+        &#{$i} {
+          #{$side}: $sides-k * $i;
+        }
+      }
+    }
+  }
+}

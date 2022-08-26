@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+a, p {
+  color: inherit;
+  display: block;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+button {
+  cursor: pointer;
+}
+
+hr {
+  background-color: #8888;
+  border: none;
+  border-radius: 1px;
+  height: 2px;
+  margin: 16px 0;
+}
+
+p {
+  margin: 0;
+}
