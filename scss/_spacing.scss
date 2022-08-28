@@ -1,13 +1,14 @@
-@use "sass:math";
+$spacers: (
+  m: margin,
+  p: padding,
+);
 
-$spacers: (m: margin, p: padding);
+$space_a: 4px;
+$space_b: $b2_3;
+$space_n: 10;
 
-@function getSpacing($i) {
-  @return 4px * math.pow($k50, $i);
-}
-
-@for $i from 0 through 7 {
-  $spacing: getSpacing($i);
+@for $i from 0 through $space_n {
+  $spacing: getValue($i, $space_a, $space_b);
   @each $spacer-k, $spacer in $spacers {
     .#{$spacer-k} {
       &#{$i} {
