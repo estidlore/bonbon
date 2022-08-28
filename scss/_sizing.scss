@@ -1,10 +1,14 @@
 @use "sass:math";
 
-$size-n: 10;
-$size-k: calc(100 / $size-n);
+$size_a: 12px;
+$size_b: $b2_3;
+$size_n: 10;
 
-@for $i from 0 through $size-n {
-  $size: 12px * math.pow($k15, $i);
+$size_p_n: 10;
+$size_p: calc(100 / $size_n);
+
+@for $i from 0 through $size_n {
+  $size: getValue($i, $size_a, $size_b);
   .h#{$i} {
     height: $size;
   }
@@ -13,9 +17,9 @@ $size-k: calc(100 / $size-n);
   }
 }
 
-@for $i from 1 through $size-n {
-  $k: math.round($i * $size-k);
-  $size: $i * $size-k * 1%;
+@for $i from 1 through $size_p_n {
+  $k: math.round($i * $size_p);
+  $size: $i * $size_p * 1%;
   .hp#{$k} {
     height: $size;
   }
