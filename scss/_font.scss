@@ -1,4 +1,3 @@
-$font-size: 12px;
 $font-styles: (
   i: italic,
   n: normal,
@@ -16,12 +15,16 @@ $text-decors: (
   under: underline,
 );
 
+$f_a: 12px;
+$f_b: $b1_3;
+$f_n: 10;
+
 .f {
-  @for $i from 1 through 10 {
+  @for $i from 1 through $f_n {
+    $font-size: getValue($i, $f_a, $f_b);
     &#{$i} {
       font-size: $font-size;
     }
-    $font-size: $font-size * $k15;
   }
 }
 .fs {
