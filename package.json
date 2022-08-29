@@ -4,16 +4,19 @@
   "description": "Simple sass utilities to cover most needs, with smooth values changes and little verbose",
   "main": "index.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css": "sass --embed-sources --no-error-css --style compressed scss:dist/css"
   },
   "keywords": [
-    "front",
-    "node",
+    "css",
+    "front-end",
     "sass",
     "styles",
-    "utils",
-    "ux"
+    "ux",
+    "web"
   ],
   "author": "estidlore",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.54.5"
+  }
 }
