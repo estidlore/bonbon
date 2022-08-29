@@ -1,6 +1,6 @@
 {
   "name": "@estidlore/bonbon",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Simple sass utilities to cover most needs, with smooth values changes and little verbose",
   "main": "index.scss",
   "scripts": {
