@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="Bonbon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title6280">Bonbon</title>
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:lockguides="false"
+     inkscape:zoom="1.0255231"
+     inkscape:cx="343.72703"
+     inkscape:cy="338.85147"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid9"
+       empspacing="16" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path3593"
+       style="fill:#f8f8f8;fill-opacity:1;stroke:#fcdd9a;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 376.49023 48.505859 A 240 240 0 0 0 256 256 A 240 240 0 0 1 463.49414 375.50977 A 240 240 0 0 0 496 256 A 240 240 0 0 0 376.49023 48.505859 z M 256 256 A 240 240 0 0 1 48.773438 136 A 240 240 0 0 0 16 256 A 240 240 0 0 0 136 463.22656 A 240 240 0 0 0 256 256 z " />
+    <path
+       id="path119"
+       style="fill:#ffc23c;stroke-width:32;stroke-dasharray:none;paint-order:stroke fill markers;stroke:#fcdd9a;stroke-opacity:1;stroke-linejoin:round;stroke-linecap:round;fill-opacity:1"
+       d="M 256 16 A 240 240 0 0 0 48.773438 136 A 240 240 0 0 0 256 256 A 240 240 0 0 1 376.49023 48.505859 A 240 240 0 0 0 256 16 z M 256 256 A 240 240 0 0 1 136 463.22656 A 240 240 0 0 0 256 496 A 240 240 0 0 0 463.49414 375.50977 A 240 240 0 0 0 256 256 z " />
+  </g>
+  <metadata
+     id="metadata6278">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Bonbon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

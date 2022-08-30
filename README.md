@@ -76,8 +76,6 @@ Don't forget to give the project a star! Thanks again!
 
 Code and documentation copyright 2022 the [Bonbon authors](https://github.com/estidlore/bonbon/graphs/contributors). Code released under the [MIT License](https://github.com/estidlore/bonbon/blob/main/LICENSE).
 
-Code distributed under the MIT License.
-
 <!-- CONTACT -->
 ## Contact
 
