@@ -30,5 +30,13 @@ $bdr_n: 3;
       border-style: solid;
       border-width: $i * 1px;
     }
+    @each $axis-k, $axis in $axes {
+      @each $side-k, $side in $axis {
+        &#{-$side-k}#{$i} {
+          border-#{$side}-style: solid;
+          border-#{$side}-width: $i * 1px;
+        }
+      }
+    }
   }
 }
