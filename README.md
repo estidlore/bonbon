@@ -3,10 +3,10 @@
 
 <div align="center">
   <a href="https://github.com/estidlore/bonbon">
-    <img src="site/src/imgs/bonbon.svg" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/estidlore/bonbon/8972af18edbe07c9f4da3489c69e990cfb697d3b/site/src/imgs/Bonbon.svg" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">Bonbon</h3>
+  
+  <h2 align="center">Bonbon</h2>
 
   <p align="center">
     Simple but powerful styling tool
