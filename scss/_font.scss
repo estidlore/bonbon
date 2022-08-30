@@ -1,3 +1,9 @@
+$font-families: (
+  arial: arial,
+  system: system-ui,
+  tahoma: tahoma,
+  verdana: verdana,
+);
 $font-styles: (
   i: italic,
   n: normal,
@@ -27,10 +33,24 @@ $f_n: 10;
     }
   }
 }
+.ff {
+  @each $font-family-k, $font-family in $font-families {
+    &#{-$font-family-k} {
+      font-family: $font-family;
+    }
+  }
+}
 .fs {
   @each $style-k, $style in $font-styles {
     &#{-$style-k} {
       font-style: $style;
+    }
+  }
+}
+.fw {
+  @for $i from 1 through 9 {
+    &#{$i} {
+      font-weight: $i * 100;
     }
   }
 }
