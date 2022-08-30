@@ -1,0 +1,71 @@
+@import "consts";
+
+$ani-directions: (
+  n: normal,
+  rev: reverse,
+  alt: alternate,
+  altrev: alternate-reverse,
+);
+$ani-fills: (
+  back: backwards,
+  both: both,
+  for: forwards,
+  no: none,
+);
+$ani-functions: (
+  ease: ease,
+  in: ease-in,
+  lin: linear,
+  out: ease-out,
+);
+
+$ani_a: 0.3s;
+$ani_b: $b1_3;
+$ani_n: 10;
+
+@mixin ani($name, $hov: true) {
+  @keyframes #{$name} {
+    @content;
+  }
+  .ani-#{$name} {
+    animation-name: $name;
+  }
+  @if $hov {
+    .hov-ani-#{$name}:hover {
+      animation-name: $name;
+    }
+  }
+}
+
+.ani {
+  @for $i from 0 through $ani_n {
+    &#{$i} {
+      animation-duration: getValue($i, $ani_a, $ani_b, 1);
+    }
+  }
+  &#{-dir-} {
+    @each $dir-k, $dir in $ani-directions {
+      &#{$dir-k} {
+        animation-direction: $dir;
+      }
+    }
+  }
+  &#{-fm-} {
+    @each $fill-k, $fill in $ani-fills {
+      &#{$fill-k} {
+        animation-fill-mode: $fill;
+      }
+    }
+  }
+  &#{-tf-} {
+    @each $func-k, $func in $ani-functions {
+      &#{$func-k} {
+        animation-timing-function: $func;
+      }
+    }
+  }
+}
+
+@include ani(rot) {
+  to { transform: rotate(360deg); }
+}
