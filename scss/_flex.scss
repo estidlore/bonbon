@@ -35,7 +35,13 @@ $justifies: (
     }
   }
 }
-
+.as {
+  @each $align-k, $align in $aligns {
+    &#{-$align-k} {
+      align-self: $align;
+    }
+  }
+}
 .jc {
   @each $justify-k, $justify in $justifies {
     &#{-$justify-k} {
