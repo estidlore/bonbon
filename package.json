@@ -18,7 +18,8 @@
     "url": "https://github.com/estidlore/bonbon.git"
   },
   "scripts": {
-    "css": "sass --embed-sources --no-error-css --style compressed scss:dist/css"
+    "css": "sass --embed-sources --no-error-css --style compressed scss:dist/css",
+    "publish": "npm run css && npm publish"
   },
   "devDependencies": {
     "sass": "^1.54.5"
