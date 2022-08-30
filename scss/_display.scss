@@ -6,10 +6,23 @@ $displays: (
   if: inline-flex,
 );
 
+$op_n: 10;
+$z_n: 3;
+$z_step: 10;
+
 .d {
   @each $disp-k, $disp in $displays {
     &#{-$disp-k} {
       display: $disp;
+    }
+  }
+}
+
+.op {
+  $op_step: getStep($op_n, 0, 1);
+  @for $i from 0 through $op_n  {
+    &#{$i} {
+      opacity: round($i * $op_step, 2);
     }
   }
 }
@@ -21,6 +34,15 @@ $displays: (
   @each $axis, $sides in $axes {
     &#{$axis} {
       overflow-#{$axis}: auto;
+    }
+  }
+}
+
+.z {
+  @for $i from -$z_n through $z_n {
+    $val: $i * $z_step;
+    &#{$val} {
+      z-index: $val;
     }
   }
 }
