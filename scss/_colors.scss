@@ -39,13 +39,13 @@ $colors: (
 @each $color-k, $color in $colors {
   @for $i from 1 through $brights {
     $val: nth($color, $i);
-    .bg-#{$color-k}#{$i} {
+    @include hov(bg-#{$color-k}#{$i}) {
       background-color: $val;
     }
-    .bdr-#{$color-k}#{$i} {
+    @include hov(bdr-#{$color-k}#{$i}) {
       border-color: $val;
     }
-    .#{$color-k}#{$i} {
+    @include hov(#{$color-k}#{$i}) {
       color: $val;
     }
   }

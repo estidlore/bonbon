@@ -1,8 +1,14 @@
 $positions: (
   abs: absolute,
+  fix: fixed,
   rel: relative,
+  stat: static,
+  stick: sticky,
 );
 
+$pos_a: 4px;
+$pos_b: $b2_3;
+$pos_n: 10;
 $sides_n: 8;
 $sides_k: calc(100% / $sides_n);
 
@@ -14,13 +20,15 @@ $sides_k: calc(100% / $sides_n);
   }
 }
 
-@each $axis-k, $axis in $axes {
-  @each $side-k, $side in $axis {
-    .#{$side-k} {
-      @for $i from 0 through $sides_n {
-        &#{$i} {
-          #{$side}: $sides_k * $i;
-        }
+@for $i from 0 through $sides_n {
+  $pos: getValue($i, $pos_a, $pos_b);
+  @each $axis-k, $axis in $axes {
+    @each $side-k, $side in $axis {
+      .#{$side-k}#{$i} {
+        #{$side}: $pos;
+      }
+      .#{$side-k}p#{$i} {
+        #{$side}: $sides_k * $i;
       }
     }
   }

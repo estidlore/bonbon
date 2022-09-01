@@ -31,3 +31,12 @@ $axes: (
   }
   @return round($a * math.pow($b, math.abs($x) - 1), $n);
 }
+
+@mixin hov($class) {
+  .#{$class} {
+    @content;
+  }
+  .hov-#{$class}:hover {
+    @content;
+  }
+}

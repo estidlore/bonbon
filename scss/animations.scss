@@ -23,17 +23,13 @@ $ani_a: 0.3s;
 $ani_b: $b1_3;
 $ani_n: 10;
 
-@mixin ani($name, $hov: true) {
+@mixin ani($name) {
   @keyframes #{$name} {
     @content;
   }
-  .ani-#{$name} {
+
+  @include hov(ani-#{$name}) {
     animation-name: $name;
-  }
-  @if $hov {
-    .hov-ani-#{$name}:hover {
-      animation-name: $name;
-    }
   }
 }
 
