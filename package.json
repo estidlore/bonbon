@@ -11,6 +11,7 @@
     "ux",
     "web"
   ],
+  "homepage": "https://estidlore-bonbon.web.app/",
   "license": "MIT",
   "main": "index.scss",
   "repository": {

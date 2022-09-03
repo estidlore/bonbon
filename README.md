@@ -2,7 +2,7 @@
 <!-- HEADER -->
 
 <div align="center">
-  <a href="https://github.com/estidlore/bonbon">
+  <a href="https://estidlore-bonbon.web.app/">
     <img src="https://raw.githubusercontent.com/estidlore/bonbon/8972af18edbe07c9f4da3489c69e990cfb697d3b/site/src/imgs/Bonbon.svg" alt="Logo" width="80" height="80">
   </a>
   
