@@ -10,7 +10,7 @@ import { Text } from "./Text";
 const Docs: FC = (): JSX.Element => (
   <div className={"d-f"}>
     <SideBar />
-    <div className={"bg-light1 grow p6"}>
+    <div className={"bg-light1 d-f grow overflowx p6"}>
       <Routes>
         <Route element={<Colors />} path={"colors"} />
         <Route element={<Spacing />} path={"spacing"} />
