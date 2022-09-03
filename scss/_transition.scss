@@ -1,0 +1,12 @@
+$trn_a: 0.3s;
+$trn_b: $b1_3;
+$trn_n: 10;
+
+.trn {
+  transition: all;
+  @for $i from 0 through $trn_n {
+    &#{$i} {
+      transition-duration: getValue($i, $trn_a, $trn_b, 1);
+    }
+  }
+}
