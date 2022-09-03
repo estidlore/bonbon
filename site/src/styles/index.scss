@@ -1,0 +1,28 @@
+@import "@estidlore/bonbon/scss/index.scss";
+@import "@estidlore/bonbon/scss/animations.scss";
+
+// Tags
+
+nav {
+  a:not(:hover):not(.active) {
+    opacity: 0.75;
+  }
+}
+
+// components
+
+.AppWrapper {
+  min-height: 100vh;
+}
+
+// Docs
+
+.SideBar {
+  height: calc(100vh - 150px);
+}
+
+// Docs/components
+
+.SubSection {
+  max-height: 600px;
+}
