@@ -49,10 +49,12 @@ yarn add @estidlore/bonbon
 In your main file (i.e. `src/index.js`) write:
 ```
 import "@estidlore/bonbon/dist/css/index.css";
+import "@estidlore/bonbon/dist/css/animations.css";
 ```
 or if you want to import the `scss`:
 ```
 import "@estidlore/bonbon/scss/index.scss";
+import "@estidlore/bonbon/scss/animations.scss";
 ```
 
 <!-- CONTRIBUTING -->
