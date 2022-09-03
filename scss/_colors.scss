@@ -36,6 +36,10 @@ $colors: (
   primary: $primary,
 );
 
+.bg-no {
+  background: none;
+}
+
 @each $color-k, $color in $colors {
   @for $i from 1 through $brights {
     $val: nth($color, $i);

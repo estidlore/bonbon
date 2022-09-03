@@ -36,7 +36,7 @@ $axes: (
   .#{$class} {
     @content;
   }
-  .hov-#{$class}:hover {
+  .hov-#{$class}:not([disabled]):hover {
     @content;
   }
 }
