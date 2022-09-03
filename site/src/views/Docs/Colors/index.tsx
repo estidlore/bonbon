@@ -4,11 +4,13 @@ import React from "react";
 import { Doc } from "../components";
 
 import { Background } from "./Background";
+import { Border } from "./Border";
 import { Text } from "./Text";
 
 const Colors: FC = (): JSX.Element => (
   <Doc title={"Colors"}>
     <Background />
+    <Border />
     <Text />
   </Doc>
 );
