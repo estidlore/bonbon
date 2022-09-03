@@ -12,7 +12,7 @@ import { SpacingLink } from "./SpacingLink";
 import { TextLink } from "./TextLink";
 
 const SideBar: FC = (): JSX.Element => (
-  <div className={"SideBar bg-light1 px7 pos-stick t8"}>
+  <div className={"SideBar bg-light1 px6 pos-stick t8"}>
     <AnimationLink />
     <BorderLink />
     <ColorsLink />
