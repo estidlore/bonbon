@@ -1,10 +1,10 @@
-import type { FC } from "react";
-import React, { ReactNode } from "react";
+import type { FC, ReactNode } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 interface INavProps {
   children: ReactNode;
-  logo: any;
+  logo: string;
   name?: string;
 }
 

@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import React from "react";
-import { Link as RRLink, LinkProps } from "react-router-dom";
+import type { LinkProps } from "react-router-dom";
+import { Link as RRLink } from "react-router-dom";
 
 import { Button } from "./Button";
 

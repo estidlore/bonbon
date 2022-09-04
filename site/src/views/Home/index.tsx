@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import React from "react";
 
-
 import imgBonbon from "imgs/Bonbon.svg";
 
 const snippet = "bg-light3 f3 mt2 px5 py3 rnd";

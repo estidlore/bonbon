@@ -4,9 +4,7 @@ import { Link } from "components";
 
 const SizingLink: FC = (): JSX.Element => (
   <div>
-    <Link disabled={true} to={"sizing"}>
-      {"Sizing"}
-    </Link>
+    <Link to={"sizing"}>{"Sizing"}</Link>
   </div>
 );
 

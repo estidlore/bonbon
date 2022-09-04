@@ -13,25 +13,39 @@ const Margin: FC = (): JSX.Element => (
     examples={
       <Fragment>
         {nums.map((val) => (
-          <Box className={`m${val} p1`}>{`m${val}`}</Box>
+          <Box className={`m${val} p1`} key={val}>
+            {`m${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`mx${val} p1`}>{`mx${val}`}</Box>
+          <Box className={`mx${val} p1`} key={val}>
+            {`mx${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`ml${val} p1`}>{`ml${val}`}</Box>
+          <Box className={`ml${val} p1`} key={val}>
+            {`ml${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`mr${val} p1`}>{`mr${val}`}</Box>
+          <Box className={`mr${val} p1`} key={val}>
+            {`mr${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`my${val} p1`}>{`my${val}`}</Box>
+          <Box className={`my${val} p1`} key={val}>
+            {`my${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`mt${val} p1`}>{`mt${val}`}</Box>
+          <Box className={`mt${val} p1`} key={val}>
+            {`mt${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`mb${val} p1`}>{`mb${val}`}</Box>
+          <Box className={`mb${val} p1`} key={val}>
+            {`mb${val}`}
+          </Box>
         ))}
       </Fragment>
     }

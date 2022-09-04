@@ -1,4 +1,3 @@
-import { Box } from "views/Docs/components/Box";
 import type { FC } from "react";
 import React, { Fragment } from "react";
 
@@ -17,14 +16,14 @@ const Border: FC = (): JSX.Element => (
       <Fragment>
         <div className={`${wrapper} bg-light1`}>
           {nums.map((val) => (
-            <p className={`${element} bdr-dark${val} dark${val}`}>
+            <p className={`${element} bdr-dark${val} dark${val}`} key={val}>
               {`bdr-dark${val}`}
             </p>
           ))}
         </div>
         <div className={`${wrapper} bg-dark1`}>
           {nums.map((val) => (
-            <p className={`${element} bdr-light${val} light${val}`}>
+            <p className={`${element} bdr-light${val} light${val}`} key={val}>
               {`bdr-light${val}`}
             </p>
           ))}
@@ -32,7 +31,7 @@ const Border: FC = (): JSX.Element => (
         
         <div className={`${wrapper} bg-light1`}>
           {nums.map((val) => (
-            <p className={`${element} bdr-primary${val} primary${val}`}>
+            <p className={`${element} bdr-primary${val} primary${val}`} key={val}>
               {`bdr-primary${val}`}
             </p>
           ))}

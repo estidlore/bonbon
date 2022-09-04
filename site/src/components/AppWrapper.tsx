@@ -1,5 +1,5 @@
-import type { FC } from "react";
-import React, { ReactNode, useLayoutEffect } from "react";
+import type { FC, ReactNode } from "react";
+import React, { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 interface IAppWrapperProps {

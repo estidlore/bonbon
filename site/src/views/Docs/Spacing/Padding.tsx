@@ -12,25 +12,39 @@ const Padding: FC = (): JSX.Element => (
     examples={
       <Fragment>
         {nums.map((val) => (
-          <Box className={`p${val}`}>{`p${val}`}</Box>
+          <Box className={`p${val}`} key={val}>
+            {`p${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`px${val}`}>{`px${val}`}</Box>
+          <Box className={`px${val}`} key={val}>
+            {`px${val}`}
+            </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`pl${val}`}>{`pl${val}`}</Box>
+          <Box className={`pl${val}`} key={val}>
+            {`pl${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`pr${val}`}>{`pr${val}`}</Box>
+          <Box className={`pr${val}`} key={val}>
+            {`pr${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`py${val}`}>{`py${val}`}</Box>
+          <Box className={`py${val}`} key={val}>
+            {`py${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`pt${val}`}>{`pt${val}`}</Box>
+          <Box className={`pt${val}`} key={val}>
+            {`pt${val}`}
+          </Box>
         ))}
         {nums.map((val) => (
-          <Box className={`pb${val}`}>{`pb${val}`}</Box>
+          <Box className={`pb${val}`} key={val}>
+            {`pb${val}`}
+          </Box>
         ))}
       </Fragment>
     }

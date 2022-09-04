@@ -9,7 +9,9 @@ const FontSize: FC = (): JSX.Element => (
     examples={
       <Fragment>
         {range(1, 10).map((val) => (
-          <span className={`f${val} p2`}>{`f${val}`}</span>
+          <span key={val} className={`f${val} p2`}>
+            {`f${val}`}
+          </span>
         ))}
       </Fragment>
     }

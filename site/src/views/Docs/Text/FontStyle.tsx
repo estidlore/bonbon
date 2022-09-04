@@ -16,7 +16,9 @@ const FontStyle: FC = (): JSX.Element => (
   <div id={"style"}>
     <p className={"f6"}>{"Font style"}</p>
     {fontStyles.map(({ key }): JSX.Element => (
-      <p className={`fs-${key} p2`}>{`fs-${key}`}</p>
+      <p className={`fs-${key} p2`} key={key}>
+        {`fs-${key}`}
+      </p>
     ))}
   </div>
 );

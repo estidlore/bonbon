@@ -1,4 +1,3 @@
-import { Box } from "views/Docs/components/Box";
 import type { FC } from "react";
 import React, { Fragment } from "react";
 
@@ -8,26 +7,34 @@ import { Section } from "../components";
 
 const nums = range(1, 8);
 
+const element = "fill px1 py5";
+const wrapper = "d-f ta-center";
+
 const Background: FC = (): JSX.Element => (
   <Section
     examples={
       <Fragment>
-        <div className={"d-f light1 ta-center"}>
+        <div className={`${wrapper} light1`}>
           {nums.map((val) => (
-            <p className={`bg-dark${val} fill px1 py5`}>{`bg-dark${val}`}</p>
+            <p className={`${element} bg-dark${val}`} key={val}>
+              {`bg-dark${val}`}
+            </p>
           ))}
         </div>
-        <div className={"d-f dark1 ta-center"}>
+        <div className={`${wrapper} dark1`}>
           {nums.map((val) => (
-            <p className={`bg-light${val} fill px1 py5`}>{`bg-light${val}`}</p>
+            <p className={`${element} bg-light${val}`} key={val}>
+              {`bg-light${val}`}
+            </p>
           ))}
         </div>
-        <div className={"d-f ta-center"}>
+        <div className={wrapper}>
           {nums.map((val) => (
             <p 
               className={
-                `bg-primary${val} fill ${val <= 4 ? "light" : "dark"}1 px1 py5`
+                `${element} bg-primary${val} ${val <= 4 ? "light" : "dark"}1`
               }
+              key={val}
             >
               {`bg-primary${val}`}
             </p>
