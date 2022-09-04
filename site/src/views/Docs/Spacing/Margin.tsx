@@ -1,10 +1,9 @@
-import { Box } from "views/Docs/components/Box";
 import type { FC } from "react";
 import React, { Fragment } from "react";
 
 import { range } from "utils/arrays";
 
-import { Section } from "../components";
+import { Box, Section } from "../components";
 
 const nums = range(0, 10);
 
