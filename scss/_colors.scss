@@ -1,3 +1,30 @@
+/*
+* $base: the color from which alpha, hue and saturation will be taken
+* $n: the amount of lightness variations will be
+* $mode: 
+* - "dark":  considers lightness from   0% to  50%
+* - "full":  considers lightness from   0% to 100%
+* - "light": considers lightness from 100% to  50%
+*/
+@function getPalette($base, $n: 8, $mode: "full") {
+  @if (null == index(("dark", "full", "light"), $mode)) {
+    @error "($mode: #{$mode}) isn't valid";
+  }
+  $alp: alpha($base);
+  $hue: hue($base);
+  $sat: saturation($base);
+  $a: if($mode == "light", 100%, 0%);
+  $b: if($mode == "full", 100%, 50%);
+  $step: getStep($n, $a, $b);
+  $palette: ();
+  @for $i from 1 through $n {
+    $light: ($i - 0.5) * $step + $a;
+    $color: hsla($hue, $sat, $light, $alp);
+    $palette: append($palette, $color);
+  }
+  @return $palette;
+}
+
 $dark: (
   #080808,
   #181818,
