@@ -9,9 +9,9 @@ const BorderWidth: FC = (): JSX.Element => (
     examples={
       <Fragment>
         {range(0, 3).map((val) => (
-          <span key={val} className={`bdr${val} bdr-light8 p2`}>
+          <div key={val} className={`bdr${val} bdr-dark6 d-ib m1 p2 rnd`}>
             {`bdr${val}`}
-          </span>
+          </div>
         ))}
       </Fragment>
     }
