@@ -4,9 +4,7 @@ import { Link } from "components";
 
 const BorderLink: FC = (): JSX.Element => (
   <div>
-    <Link disabled={true} to={"border"}>
-      {"Border"}
-    </Link>
+    <Link to={"border"}>{"Border"}</Link>
   </div>
 );
 
