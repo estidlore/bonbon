@@ -1,5 +1,6 @@
 import type { FC } from "react";
-import React from "react";
+import React, { Fragment } from "react";
+import { Section } from "../components";
 
 const fontStyles = [
   {
@@ -13,14 +14,17 @@ const fontStyles = [
 ];
 
 const FontStyle: FC = (): JSX.Element => (
-  <div id={"style"}>
-    <p className={"f6"}>{"Font style"}</p>
-    {fontStyles.map(({ key }): JSX.Element => (
-      <p className={`fs-${key} p2`} key={key}>
-        {`fs-${key}`}
-      </p>
-    ))}
-  </div>
+  <Section id={"style"} title={"Font style"}
+    examples={
+      <Fragment>
+        {fontStyles.map(({ key }) => (
+          <span key={key} className={`fs-${key} p2`}>
+            {`fs-${key}`}
+          </span>
+        ))}
+      </Fragment>
+    }
+  />
 );
 
 export { FontStyle };
