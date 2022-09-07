@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { Colors } from "./Colors";
 import { Border } from "./Border";
+import { Flex } from "./Flex";
 import { SideBar } from "./SideBar";
 import { Sizing } from "./Sizing";
 import { Spacing } from "./Spacing";
@@ -16,6 +17,7 @@ const Docs: FC = (): JSX.Element => (
       <Routes>
         <Route element={<Border />} path={"border"} />
         <Route element={<Colors />} path={"colors"} />
+        <Route element={<Flex />} path={"flex"} />
         <Route element={<Sizing />} path={"sizing"} />
         <Route element={<Spacing />} path={"spacing"} />
         <Route element={<Text />} path={"text"} />

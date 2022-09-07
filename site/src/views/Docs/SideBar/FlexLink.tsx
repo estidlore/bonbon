@@ -4,9 +4,15 @@ import { Link } from "components";
 
 const FlexLink: FC = (): JSX.Element => (
   <div>
-    <Link disabled={true} to={"flex"}>
-      {"Flex"}
-    </Link>
+    <Link to={"flex"}>{"Flex"}</Link>
+    <div className={"py1 pl4"}>
+      <Link to={{ hash: "align", pathname: "flex" }}>
+        {"Align"}
+      </Link>
+      <Link to={{ hash: "justify", pathname: "flex" }}>
+        {"Justify"}
+      </Link>
+    </div>
   </div>
 );
 

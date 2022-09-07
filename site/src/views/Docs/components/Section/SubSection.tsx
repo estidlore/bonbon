@@ -12,7 +12,7 @@ const SubSection: FC<ISubSectionProps> = ({
 }: Readonly<ISubSectionProps>): JSX.Element => (
   <Fragment>
     <p className={"f5"}>{title}</p>
-    <div className={"SubSection overflowy p2 bg-light2 rnd"}>{children}</div>
+    <div className={"SubSection overflowy p2 rnd"}>{children}</div>
   </Fragment>
 );
 
