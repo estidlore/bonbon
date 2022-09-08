@@ -16,6 +16,10 @@
 :disabled {
   opacity: 0.5;
 }
+ 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
