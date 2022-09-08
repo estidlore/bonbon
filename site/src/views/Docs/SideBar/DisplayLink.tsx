@@ -4,9 +4,7 @@ import { Link } from "components";
 
 const DisplayLink: FC = (): JSX.Element => (
   <div>
-    <Link disabled={true} to={"display"}>
-      {"Display"}
-    </Link>
+    <Link to={"display"}>{"Display"}</Link>
   </div>
 );
 

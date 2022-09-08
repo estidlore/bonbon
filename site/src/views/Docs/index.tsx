@@ -9,6 +9,7 @@ import { SideBar } from "./SideBar";
 import { Sizing } from "./Sizing";
 import { Spacing } from "./Spacing";
 import { Text } from "./Text";
+import { DisplayDoc } from "./Display";
 
 const Docs: FC = (): JSX.Element => (
   <div className={"d-f"}>
@@ -17,6 +18,7 @@ const Docs: FC = (): JSX.Element => (
       <Routes>
         <Route element={<Border />} path={"border"} />
         <Route element={<Colors />} path={"colors"} />
+        <Route element={<DisplayDoc />} path={"display"} />
         <Route element={<Flex />} path={"flex"} />
         <Route element={<Sizing />} path={"sizing"} />
         <Route element={<Spacing />} path={"spacing"} />
