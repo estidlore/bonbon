@@ -15,9 +15,9 @@ const Nav: FC<INavProps> = ({
   logo,
   name,
 }: Readonly<INavProps>): JSX.Element => (
-  <nav className={"ai-center bg-primary4 d-f h4 light1 pos-stick px5 py1 t0"}>
+  <nav className={"ai-center bg-primary4 d-f light1 pos-stick px5 py1 t0"}>
     <NavLink className={`${navLink} d-f hp70 mr3`} to={"/"}>
-      <img className={"ani4 hov-ani-rot hp100"} src={logo} />
+      <img className={"ani4 hov-ani-rot h3"} src={logo} />
       {name === undefined ? undefined : (
         <p className={"as-center f3 ml2"}>{name}</p>
       )}
