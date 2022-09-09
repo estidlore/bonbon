@@ -25,22 +25,29 @@
   @return $palette;
 }
 
-$brights: 8;
-$dark: getPalette(#000, $brights, "dark");
-$light: getPalette(#000, $brights, "light");
-$primary: getPalette(#f2590d, $brights, "full");
+$dark: (base: #000, mode: "dark", n: 8) !default;
+$light: (base: #fff, mode: "light", n: 8) !default;
+$primary: (base: #f2590d, mode: "full", n: 8) !default;
+$secondary: (base: #dfc020, mode: "full", n: 8) !default;
+
 $colors: (
   dark: $dark,
   light: $light,
   primary: $primary,
-);
+  secondary: $secondary,
+) !default;
 
 .bg-no {
   background: none;
 }
 
 @each $color-k, $color in $colors {
-  @for $i from 1 through $brights {
+  $color: getPalette(
+    map-get($color, "base"),
+    map-get($color, "n"),
+    map-get($color, "mode"),
+  );
+  @for $i from 1 through length($color) {
     $val: nth($color, $i);
     @include hov(bg-#{$color-k}#{$i}) {
       background-color: $val;
