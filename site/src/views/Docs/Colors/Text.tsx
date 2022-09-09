@@ -35,6 +35,13 @@ const Text: FC = (): JSX.Element => (
             </p>
           ))}
         </div>
+        <div className={`${wrapper} bg-light1`}>
+          {nums.map((val) => (
+            <p className={`${element} secondary${val}`} key={val}>
+              {`secondary${val}`}
+            </p>
+          ))}
+        </div>
       </Fragment>
     }
     id={"text"}

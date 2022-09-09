@@ -40,6 +40,18 @@ const Background: FC = (): JSX.Element => (
             </p>
           ))}
         </div>
+        <div className={wrapper}>
+          {nums.map((val) => (
+            <p 
+              className={
+                `${element} bg-secondary${val} ${val <= 4 ? "light" : "dark"}1`
+              }
+              key={val}
+            >
+              {`bg-secondary${val}`}
+            </p>
+          ))}
+        </div>
       </Fragment>
     }
     id={"background"}

@@ -28,11 +28,23 @@ const Border: FC = (): JSX.Element => (
             </p>
           ))}
         </div>
-        
         <div className={`${wrapper} bg-light1`}>
           {nums.map((val) => (
-            <p className={`${element} bdr-primary${val} primary${val}`} key={val}>
+            <p
+              className={`${element} bdr-primary${val} primary${val}`}
+              key={val}
+            >
               {`bdr-primary${val}`}
+            </p>
+          ))}
+        </div>
+        <div className={`${wrapper} bg-light1`}>
+          {nums.map((val) => (
+            <p
+              className={`${element} bdr-secondary${val} secondary${val}`}
+              key={val}
+            >
+              {`bdr-secondary${val}`}
             </p>
           ))}
         </div>
