@@ -5,6 +5,7 @@ import { Doc } from "../components";
 
 import { Background } from "./Background";
 import { Border } from "./Border";
+import { Customize } from "./Customize";
 import { Text } from "./Text";
 
 const Colors: FC = (): JSX.Element => (
@@ -12,6 +13,7 @@ const Colors: FC = (): JSX.Element => (
     <Background />
     <Border />
     <Text />
+    <Customize />
   </Doc>
 );
 
