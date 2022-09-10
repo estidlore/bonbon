@@ -21,6 +21,7 @@
 
 * [Installation](#installation)
 * [Import](#import)
+* [Documentation](#documentation)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -56,6 +57,17 @@ or if you want to import the `scss`:
 import "@estidlore/bonbon/scss/index.scss";
 import "@estidlore/bonbon/scss/animations.scss";
 ```
+
+<!-- DOCUMENTATION -->
+
+## Documentation
+
+You can read the Bonbon's documentation at <a href="https://estidlore-bonbon.web.app/docs">
+estidlore-bonbon.web.app/docs
+</a> powered by React, Sass and, of course, Bonbon ;-)
+
+**IMPORTANT:** Please, remember that Bonbon is still a "baby" project.
+New features, fixes and documentation are constantly being added, be patient.
 
 <!-- CONTRIBUTING -->
 ## Contributing
