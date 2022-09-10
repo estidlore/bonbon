@@ -1,31 +1,31 @@
-$rnd_k: 4px;
-$bdr_n: 3;
+$border: (n: 3, rnd: 4px) !default;
 
 .rnd {
-  border-radius: $rnd_k;
+  $rnd: map-get($border, "rnd");
+  border-radius: $rnd;
   &#{-50} {
     border-radius: 50%;
   }
   &#{-b} {
-    border-bottom-left-radius: $rnd_k;
-    border-bottom-right-radius: $rnd_k;
+    border-bottom-left-radius: $rnd;
+    border-bottom-right-radius: $rnd;
   }
   &#{-l} {
-    border-bottom-left-radius: $rnd_k;
-    border-top-left-radius: $rnd_k;
+    border-bottom-left-radius: $rnd;
+    border-top-left-radius: $rnd;
   }
   &#{-r} {
-    border-bottom-right-radius: $rnd_k;
-    border-top-right-radius: $rnd_k;
+    border-bottom-right-radius: $rnd;
+    border-top-right-radius: $rnd;
   }
   &#{-t} {
-    border-top-left-radius: $rnd_k;
-    border-top-right-radius: $rnd_k;
+    border-top-left-radius: $rnd;
+    border-top-right-radius: $rnd;
   }
 }
 
 .bdr {
-  @for $i from 0 through $bdr_n {
+  @for $i from 0 through map-get($border, "n") {
     &#{$i} {
       border-style: solid;
       border-width: $i * 1px;

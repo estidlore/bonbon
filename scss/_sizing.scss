@@ -1,27 +1,25 @@
-$size_a: 12px;
-$size_b: $b2_3;
-$size_n: 10;
+$size: (b: 12px, growth: $b2_3, n: 10, p: 10) !default;
 
-$size_p_n: 10;
-$size_p: calc(100 / $size_n);
-
-@for $i from 0 through $size_n {
-  $size: getValue($i, $size_a, $size_b);
+$b: map-get($size, "n");
+@for $i from 0 through $b {
+  $val: getValue($i, map-get($size, "b"), map-get($size, "growth"));
   .h#{$i} {
-    height: $size;
+    height: $val;
   }
   .w#{$i} {
-    width: $size;
+    width: $val;
   }
 }
 
-@for $i from 1 through $size_p_n {
-  $k: round($i * $size_p, 0);
-  $size: $i * $size_p * 1%;
+$b: map-get($size, "p");
+$step: calc(100 / $b);
+@for $i from 1 through $b {
+  $k: round($i * $step, 0);
+  $val: $i * $step * 1%;
   .hp#{$k} {
-    height: $size;
+    height: $val;
   }
   .wp#{$k} {
-    width: $size;
+    width: $val;
   }
 }

@@ -1,14 +1,13 @@
 $spacers: (
   m: margin,
   p: padding,
-);
+) !default;
 
-$space_a: 4px;
-$space_b: $b2_3;
-$space_n: 10;
+$space: (b: 4px, growth: $b2_3, n: 10) !default;
 
-@for $i from 0 through $space_n {
-  $spacing: getValue($i, $space_a, $space_b);
+$b: map-get($space, "n");
+@for $i from 0 through $b {
+  $spacing: getValue($i, map-get($space, "b"), map-get($space, "growth"));
   @each $spacer-k, $spacer in $spacers {
     .#{$spacer-k} {
       &#{$i} {

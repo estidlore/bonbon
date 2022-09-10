@@ -3,7 +3,7 @@ $aligns: (
   end: flex-end,
   start: flex-start,
   stretch: stretch,
-);
+) !default;
 $justifies: (
   around: space-around,
   between: space-between,
@@ -11,7 +11,7 @@ $justifies: (
   end: end,
   even: space-evenly,
   start: start,
-);
+) !default;
 
 .fill {
   flex: 1 1 auto;

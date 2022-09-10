@@ -4,11 +4,10 @@ $displays: (
   i: inline,
   ib: inline-block,
   if: inline-flex,
-);
+) !default;
 
-$op_n: 10;
-$z_n: 3;
-$z_step: 10;
+$opacity: (n: 10) !default;
+$z: (n: 3, step: 10) !default;
 
 .d {
   @each $disp-k, $disp in $displays {
@@ -19,10 +18,11 @@ $z_step: 10;
 }
 
 .op {
-  $op_step: getStep($op_n, 0, 1);
-  @for $i from 0 through $op_n  {
+  $n: map-get($opacity, "n");
+  $step: getStep($n, 0, 1);
+  @for $i from 0 through $n  {
     &#{$i} {
-      opacity: round($i * $op_step, 2);
+      opacity: round($i * $step, 2);
     }
   }
 }
@@ -39,8 +39,11 @@ $z_step: 10;
 }
 
 .z {
-  @for $i from -$z_n through $z_n {
-    $val: $i * $z_step;
+  $step: map-get($z, "step");
+  $a: -1 * map-get($z, "n");
+  $b: map-get($z, "n");
+  @for $i from $a through $b {
+    $val: $i * $step;
     &#{$val} {
       z-index: $val;
     }
