@@ -3,31 +3,41 @@ $font-families: (
   system: system-ui,
   tahoma: tahoma,
   verdana: verdana,
-);
+) !default;
 $font-styles: (
   i: italic,
   n: normal,
-);
+) !default;
 $text-aligns: (
   center: center,
   end: end,
   justify: justify,
   start: start,
-);
+) !default;
 $text-decors: (
   no: none,
   over: overline,
   through: line-through,
   under: underline,
-);
+) !default;
+$white-spaces: (
+  bs: break-spaces,
+  n: normal,
+  nw: nowrap,
+  p: pre,
+  pl: pre-line,
+  pw: pre-wrap,
+) !default;
+$word-wraps: (
+  bw: break-word,
+  n: normal,
+) !default;
 
-$f_a: 12px;
-$f_b: $b1_3;
-$f_n: 10;
+$f: (b: 12px, growth: $b1_3, n: 10) !default;
 
 .f {
-  @for $i from 1 through $f_n {
-    $font-size: getValue($i, $f_a, $f_b);
+  @for $i from 1 through map-get($f, "n") {
+    $font-size: getValue($i, map-get($f, "b"), map-get($f, "growth"));
     &#{$i} {
       font-size: $font-size;
     }
@@ -65,6 +75,20 @@ $f_n: 10;
   @each $decor-k, $decor in $text-decors {
     &#{-$decor-k} {
       text-decoration: $decor;
+    }
+  }
+}
+.ws {
+  @each $space-k, $space in $white-spaces {
+    &#{-$space-k} {
+      white-space: $space;
+    }
+  }
+}
+.ww {
+  @each $wrap-k, $wrap in $word-wraps {
+    &#{-$wrap-k} {
+      word-wrap: $wrap;
     }
   }
 }
