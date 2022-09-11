@@ -1,19 +1,20 @@
-$trn_a: 0.3s;
-$trn_b: $b1_3;
-$trn_n: 10;
-
 $trn-functions: (
   ease: ease,
   in: ease-in,
   lin: linear,
   out: ease-out,
-);
+) !default;
+
+$trn: (b: 0.3s, growth: $b1_3, n: 10) !default;
 
 .trn {
+  $b: map-get($trn, "b");
+  $growth: map-get($trn, "growth");
+  $n: map-get($trn, "n");
   transition: all;
-  @for $i from 0 through $trn_n {
+  @for $i from 0 through $n {
     &#{$i} {
-      transition-duration: getValue($i, $trn_a, $trn_b, 1);
+      transition-duration: getValue($i, $b, $growth, 1);
     }
   }
   &#{-tf-} {

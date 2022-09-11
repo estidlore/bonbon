@@ -4,13 +4,9 @@ $positions: (
   rel: relative,
   stat: static,
   stick: sticky,
-);
+) !default;
 
-$pos_a: 4px;
-$pos_b: $b2_3;
-$pos_n: 10;
-$sides_n: 8;
-$sides_k: calc(100% / $sides_n);
+$pos: (b: 4px, growth: $b2_3, n: 10, p: 8) !default;
 
 .pos {
   @each $position-k, $position in $positions {
@@ -20,15 +16,27 @@ $sides_k: calc(100% / $sides_n);
   }
 }
 
-@for $i from 0 through $sides_n {
-  $pos: getValue($i, $pos_a, $pos_b);
+$b: map-get($pos, "b");
+$growth: map-get($pos, "growth");
+$n: map-get($pos, "n");
+@for $i from 0 through $n {
+  $val: getValue($i, $b, $growth);
   @each $axis-k, $axis in $axes {
     @each $side-k, $side in $axis {
       .#{$side-k}#{$i} {
-        #{$side}: $pos;
+        #{$side}: $val;
       }
+    }
+  }
+}
+
+$p: map-get($pos, "p");
+$step: calc(100% / $p);
+@for $i from 0 through $p {
+  @each $axis-k, $axis in $axes {
+    @each $side-k, $side in $axis {
       .#{$side-k}p#{$i} {
-        #{$side}: $sides_k * $i;
+        #{$side}: $step * $i;
       }
     }
   }
