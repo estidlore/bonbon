@@ -20,7 +20,10 @@
   },
   "scripts": {
     "css": "sass --embed-sources --no-error-css --style compressed scss:dist/css",
-    "publish": "npm run css && npm publish"
+    "deploy": "npm run css && npm --prefix site run deploy",
+    "major": "npm version major && npm publish",
+    "minor": "npm version minor && npm publish",
+    "patch": "npm version patch && npm publish"
   },
   "devDependencies": {
     "sass": "^1.54.5"

@@ -36,6 +36,7 @@
   "name": "bonbon-website",
   "scripts": {
     "build": "webpack-cli ./src/index.tsx --config webpack.config.js",
+    "deploy": "npm run build && firebase deploy",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
     "pretty": "prettier --config .prettierrc 'src/**/*.{ts,tsx}' --write",
