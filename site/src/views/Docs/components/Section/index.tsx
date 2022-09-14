@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from "react";
 import React from "react";
 
+import { Customize } from "./Customize";
 import type { INotationProps } from "./Notation";
 import { Notation } from "./Notation";
 import { SubSection } from "./SubSection";
@@ -28,4 +29,4 @@ const Section: FC<ISectionProps> = ({
 );
 
 export type { ISectionProps };
-export { Section };
+export { Customize, Section };
