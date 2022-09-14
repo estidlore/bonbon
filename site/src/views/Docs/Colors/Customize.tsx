@@ -1,19 +1,23 @@
 import type { FC } from "react";
 import React from "react";
 
-import { Snippet } from "components";
+import { Customize } from "../components/Section";
 
-const code =
-`$primary: (base: #df2020, mode: "full", n: 8);
+const variables =
+`$dark: (base: #000, mode: "dark", n: 8);
+$light: (base: #fff, mode: "light", n: 8);
+$primary: (base: #f2590d, mode: "full", n: 8);
+$secondary: (base: #dfc020, mode: "full", n: 8);
 
-@import "@estidlore/bonbon/scss/index.scss";`;
+$colors: (
+  dark: $dark,
+  light: $light,
+  primary: $primary,
+  secondary: $secondary,
+);`;
 
-const Customize: FC = (): JSX.Element => (
-  <div>
-    <p className={"f6"}>{"Customize"}</p>
-    <p>{"You can customize an entire color palette as follows."}</p>
-    <Snippet>{code}</Snippet>
-  </div>
+const ColorsCustomize: FC = (): JSX.Element => (
+  <Customize variables={variables} />
 );
 
-export { Customize };
+export { ColorsCustomize };
