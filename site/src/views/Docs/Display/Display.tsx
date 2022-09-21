@@ -12,11 +12,11 @@ const displays = {
 };
 
 const Display: FC = (): JSX.Element => (
-  <Section id={"display"} title={"Display"}
-    notation={{
+  <Section id={"display"} notation={{
       base: "d",
       values: displays,
     }}
+    title={"Display"}
   />
 );
 

@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import React from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   NavLink,
   Route,
   Routes,
@@ -13,7 +13,7 @@ import imgBonbon from "imgs/Bonbon.svg";
 import { Docs, Home, NotFound } from "views";
 
 const App: FC = (): JSX.Element => (
-  <Router>
+  <BrowserRouter>
     <AppWrapper>
       <Nav logo={imgBonbon} name={"Bonbon"}>
         <NavLink className={navLink} to={"docs"}>
@@ -26,7 +26,7 @@ const App: FC = (): JSX.Element => (
         <Route element={<NotFound />} path={"*"} />
       </Routes>
     </AppWrapper>
-  </Router>
+  </BrowserRouter>
 );
 
 export { App };

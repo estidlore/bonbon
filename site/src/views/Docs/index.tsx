@@ -2,14 +2,14 @@ import type { FC } from "react";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Colors } from "./Colors";
 import { Border } from "./Border";
+import { Colors } from "./Colors";
+import { DisplayDoc } from "./Display";
 import { Flex } from "./Flex";
 import { SideBar } from "./SideBar";
 import { Sizing } from "./Sizing";
 import { Spacing } from "./Spacing";
 import { Text } from "./Text";
-import { DisplayDoc } from "./Display";
 
 const Docs: FC = (): JSX.Element => (
   <div className={"d-f"}>

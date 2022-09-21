@@ -2,6 +2,7 @@ import type { FC } from "react";
 import React, { Fragment } from "react";
 
 import { range } from "utils/arrays";
+
 import { Section } from "../components";
 
 const aligns = {
@@ -15,8 +16,7 @@ const element = "bdr2 bdr-dark6 bg-light6 rnd";
 const wrapper = "bdr2 bdr-dark6 d-f h6 jc-center m2 rnd";
 
 const AlignItems: FC = (): JSX.Element => (
-  <Section id={"align"} title={"Align items"}
-    examples={
+  <Section examples={
       <Fragment>
         {Object.keys(aligns).map((val) => (
           <Fragment key={val}>
@@ -31,7 +31,8 @@ const AlignItems: FC = (): JSX.Element => (
           </Fragment>
         ))}
       </Fragment>
-    }
+    } id={"align"}
+    title={"Align items"}
   />
 );
 

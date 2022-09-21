@@ -2,7 +2,6 @@ import type { FC } from "react";
 import React from "react";
 
 import { Doc } from "../components";
-
 import { Margin } from "./Margin";
 import { Padding } from "./Padding";
 
