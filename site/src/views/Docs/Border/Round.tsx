@@ -4,7 +4,8 @@ import React, { Fragment } from "react";
 import { Section } from "../components";
 
 const BorderRound: FC = (): JSX.Element => (
-  <Section examples={
+  <Section
+    examples={
       <Fragment>
         {["", "-50", "-b", "-l", "-r", "-t"].map((val) => (
           <div
@@ -15,7 +16,8 @@ const BorderRound: FC = (): JSX.Element => (
           </div>
         ))}
       </Fragment>
-    } id={"round"}
+    }
+    id={"round"}
     title={"Border round"}
   />
 );

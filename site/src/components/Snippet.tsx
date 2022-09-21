@@ -19,7 +19,7 @@ const Snippet: FC<ISnippetProps> = ({
       <p>{code}</p>
       <button
         className={
-          "bdr1 bdr-light4 bg-light1 hov-bg-light4 px2 py1 pos-abs r2 rnd t2"
+        "bdr1 bdr-light4 bg-light1 hov-bg-light4 px2 py1 pos-abs r2 rnd t2"
         }
         onClick={handleCopy}
       >

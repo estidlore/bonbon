@@ -19,7 +19,7 @@ const Padding: FC = (): JSX.Element => (
         {nums.map((val) => (
           <Box className={`px${val}`} key={val}>
             {`px${val}`}
-            </Box>
+          </Box>
         ))}
         {nums.map((val) => (
           <Box className={`pl${val}`} key={val}>

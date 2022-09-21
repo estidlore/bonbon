@@ -12,7 +12,9 @@ const displays = {
 };
 
 const Display: FC = (): JSX.Element => (
-  <Section id={"display"} notation={{
+  <Section
+    id={"display"}
+    notation={{
       base: "d",
       values: displays,
     }}

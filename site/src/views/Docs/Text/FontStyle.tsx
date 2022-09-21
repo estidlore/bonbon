@@ -15,7 +15,8 @@ const fontStyles = [
 ];
 
 const FontStyle: FC = (): JSX.Element => (
-  <Section examples={
+  <Section
+    examples={
       <Fragment>
         {fontStyles.map(({ key }) => (
           <span className={`fs-${key} p2`} key={key}>
@@ -23,7 +24,8 @@ const FontStyle: FC = (): JSX.Element => (
           </span>
         ))}
       </Fragment>
-    } id={"style"}
+    }
+    id={"style"}
     title={"Font style"}
   />
 );

@@ -16,7 +16,8 @@ const element = "bdr2 bdr-dark6 bg-light6 rnd";
 const wrapper = "bdr2 bdr-dark6 d-f h6 jc-center m2 rnd";
 
 const AlignItems: FC = (): JSX.Element => (
-  <Section examples={
+  <Section
+    examples={
       <Fragment>
         {Object.keys(aligns).map((val) => (
           <Fragment key={val}>
@@ -31,7 +32,8 @@ const AlignItems: FC = (): JSX.Element => (
           </Fragment>
         ))}
       </Fragment>
-    } id={"align"}
+    }
+    id={"align"}
     title={"Align items"}
   />
 );

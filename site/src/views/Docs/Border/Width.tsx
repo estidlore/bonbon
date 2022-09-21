@@ -6,7 +6,8 @@ import { range } from "utils/arrays";
 import { Section } from "../components";
 
 const BorderWidth: FC = (): JSX.Element => (
-  <Section examples={
+  <Section
+    examples={
       <Fragment>
         {range(0, 3).map((val) => (
           <div className={`bdr${val} bdr-dark6 d-ib m1 p2 rnd`} key={val}>
@@ -14,7 +15,8 @@ const BorderWidth: FC = (): JSX.Element => (
           </div>
         ))}
       </Fragment>
-    } id={"width"}
+    }
+    id={"width"}
     title={"Border width"}
   />
 );
