@@ -11,9 +11,10 @@ $trn: (b: 0.3s, growth: $b1_3, n: 10) !default;
   $b: map-get($trn, "b");
   $growth: map-get($trn, "growth");
   $n: map-get($trn, "n");
-  transition: all;
+  transition-property: all;
   @for $i from 0 through $n {
     &#{$i} {
+      transition-property: all;
       transition-duration: getValue($i, $b, $growth, 1);
     }
   }

@@ -25,6 +25,9 @@ $border: (n: 3, rnd: 4px) !default;
 }
 
 .bdr {
+  &#{-no} {
+    border: none;
+  }
   @for $i from 0 through map-get($border, "n") {
     &#{$i} {
       border-style: solid;
