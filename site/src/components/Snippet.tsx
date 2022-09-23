@@ -15,12 +15,10 @@ const Snippet: FC<ISnippetProps> = ({
   const handleCopy = useCallback(() => copy(code), []);
 
   return (
-    <div className={"bdr1 bdr-light5 bg-light2 dark4 my3 p4 pos-rel rnd ws-pl"}>
-      <p>{code}</p>
+    <div className={"bg-light2 d-f dark4 my3 p4 rnd ws-pl"}>
+      <p className={"f3 grow"}>{code}</p>
       <button
-        className={
-        "bdr1 bdr-light4 bg-light1 hov-bg-light4 px2 py1 pos-abs r2 rnd t2"
-        }
+        className={"as-start bdr-no bg-no hov-bg-light3 ml5 px3 py2 rnd trn2"}
         onClick={handleCopy}
       >
         {"Copy"}
